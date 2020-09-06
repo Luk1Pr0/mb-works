@@ -10,7 +10,7 @@ html {
 body {
 	box-sizing: border-box;
 	margin: 0;
-	background: url("Assets/city.jpg");
+	background: url("Assets/london-thames.jpg");
 	background-size: cover;
 	min-height: 100vh;
 	background-repeat: no-repeat;
