@@ -98,7 +98,7 @@ a {
 	top: 4vh;
 	left: 10vw;
 	z-index: 99;
-	transform: translateX(0) rotate(48deg);
+	transform: translateX(0) rotate(80deg);
 	transition: 0.5s ease;
 }
 
