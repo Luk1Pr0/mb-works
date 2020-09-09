@@ -7,6 +7,7 @@ const mbworks = document.querySelector(".logoContainer");
 const welcome = document.querySelector(".welcome");
 const dropButton = document.querySelector(".drop-button");
 const dropMenu = document.querySelector(".drop-menu");
+const mainBody = document.getElementById("main-body");
 
 //Scroll to top when Home is clicked
 topButton.addEventListener("click", () => {
@@ -29,7 +30,7 @@ const navSlide = () => {
 	//Burger animation
 	burger.classList.toggle("toggle")
 	});
-}
+};
 
 navSlide();
 
@@ -53,12 +54,14 @@ window.addEventListener("scroll", () => {
 
 //Dropdown list on mouse over
 const dropDownList = () => {
-	dropButton.addEventListener("mouseenter", (e) => {
-		dropMenu.classList.add("drop-menu-active");
-	});
-	dropMenu.addEventListener("mouseleave", (e) => {
-		dropMenu.classList.remove("drop-menu-active");
-	});
+	if (!mainBody) {
+		dropButton.addEventListener("mouseenter", () => {
+			dropMenu.classList.add("drop-menu-active");
+		});
+		dropMenu.addEventListener("mouseleave", () => {
+			dropMenu.classList.remove("drop-menu-active");
+		});
+	};
 };
 
 dropDownList();
